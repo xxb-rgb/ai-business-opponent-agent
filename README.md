@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI业务反方陪练 Agent v0.1
 
-## Getting Started
+一个面向业务表达、汇报、说服、面试等场景的 AI 业务智能体样板。
 
-First, run the development server:
+## 项目定位
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+本项目用于验证一个最小 Agent 闭环：
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+用户构造表达场景 → 反方智能体提出质疑 → 引用原文进行诊断 → 生成下一轮行动清单。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+当前版本为规则与模板驱动的 MVP Demo，不接入真实用户数据，不处理隐私信息，不替代专业判断。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 核心功能
 
-## Learn More
+- 测试包快速构造输入
+- 反方智能体追问
+- 引用原文诊断
+- 雷达图能力呈现
+- 角色化行动建议
+- 导出行动卡图片
 
-To learn more about Next.js, take a look at the following resources:
+## 技术栈
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- TypeScript
+- Tailwind CSS
+- html-to-image
+- Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 当前版本边界
 
-## Deploy on Vercel
+- 当前版本用于 MVP 路径验证
+- 不接入真实大模型 API
+- 不处理真实业务数据或隐私数据
+- 不替代专业教练、顾问或业务负责人判断
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 后续迭代方向
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- 接入大模型 API
+- 接入真实业务 Rubric
+- 使用脱敏样本验证输出质量
+- 进入真实业务场景进行 30 天试点
